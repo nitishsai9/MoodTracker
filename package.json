@@ -1,0 +1,27 @@
+{
+  "name": "electrons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Nitish",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "electron-builder": "^22.9.1",
+    "electron-screencapture": "^1.1.0",
+    "electron-screenshot": "^1.0.5",
+    "electron-settings": "^4.0.2",
+    "webcamjs": "^1.0.26"
+  },
+  "build": {
+    "appId": "nitish.moodtracker.dev"
+  
+  }
+}
