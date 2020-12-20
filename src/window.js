@@ -8,7 +8,9 @@ const defaultProperties =
     width: 800,
     height: 600,
     show: false,
+    frame: false,
     webPreferences: { nodeIntegration: true }
+
 };
 
 // Create default menu template

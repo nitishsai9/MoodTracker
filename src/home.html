@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
 
-        <script defer src="node_modules/face-api.js/dist/face-api.min.js"></script>
+        <script defer src="../node_modules/face-api.js/dist/face-api.min.js"></script>
         <script defer src="face-detection.js"></script>
         <script src="navigtor.js"></script>
         
@@ -21,8 +21,16 @@
     </head>
 
     <body class="auth-card-page">
+
+    
+    
+    
         <main class="auth auth-card-container">
+
+       
+      
             <div class="auth-card">
+                
             <div class="row">
             <div class="col-md-6 d-flex align-items-center justify-content-center auth-bg-section">
                 <div style="text-align: center;">
@@ -45,9 +53,13 @@
             <input type="text" name="Full Name" autocomplete="Name" class="form-control" maxlength="150" placeholder="Full Name" required id="id_fullname">
             </div>
                      <a href="javascript:void(0)" class="btn btn-dark btn-block mb-3" onclick="getData()">
+
+
             
             continue
             </a>
+         
+
 
         
            
@@ -60,19 +72,22 @@
             </main>
 
             <script>
+                const { dialog } = require('electron')
+
                 function getData(){
                     localStorage.clear();
                     var rollNumber = document.getElementById('id_username').value;
                     var fullName =document.getElementById('id_fullname').value;
 
-                    if(rollNumber!=null && fullName!=null){
+                    if((rollNumber!=null && fullName!=null) && (rollNumber.length>0 && fullName.length>0)){
                         localStorage.setItem('rollNumber', rollNumber);
                         localStorage.setItem('fullName',fullName);
                         console.log(localStorage.getItem('rollNumber'));
 
                         nextPage(0);
                     }else{
-                        alert("something went wrong");
+                        
+                        alert("Fill In All The Details");
                     }
 
                 }

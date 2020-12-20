@@ -5,6 +5,7 @@ const path = require('path');
 const { app } = require('electron');
 const Window = require('./window');
 
+process.env.NODE_ENV='production';
 // Window Objects
 let mainWindow = null;
 
@@ -26,20 +27,20 @@ function createWindow()
 
     const menuTemplate =
     [
-        {
-            label: 'File',
-            submenu:
-            [
-                {
-                    label: 'Quit',
-                    accelerator: 'CmdOrCtrl+Q',
-                    click()
-                    {
-                        app.quit();
-                    }
-                }
-            ]
-        }
+        // {
+        //     label: 'File',
+        //     submenu:
+        //     [
+        //         {
+        //             label: 'Quit',
+        //             accelerator: 'CmdOrCtrl+Q',
+        //             click()
+        //             {
+        //                 app.quit();
+        //             }
+        //         }
+        //     ]
+        // }
     ];
 
     return new Window
